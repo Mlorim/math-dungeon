@@ -107,7 +107,7 @@ export const startGame = () => {
     enemyDiv.classList.add("enemy");
 
     const image = document.createElement('img');
-    image.src = "/images/skeleton.png";
+    image.src = "images/skeleton.png";
     image.classList.add('image');
 
     const timer = document.createElement('div');
@@ -154,7 +154,7 @@ export const startGame = () => {
             console.log("OK");
             clearInterval(countDown);
             score += 1;
-            image.src= "/images/sword.png";
+            image.src= "images/sword.png";
             setTimeout(startGame, 1000);
         } else {
             console.log("NOT OK", answerDiv.innerHTML, solution);

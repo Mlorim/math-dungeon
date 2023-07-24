@@ -1,0 +1,120 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base{
+  @font-face {
+    font-family: Lilita_One;
+    font-weight: 400;
+    font-style: normal;
+    src: url('/fonts/Lilita_One/LilitaOne-Regular.ttf');
+  }
+
+  @font-face {
+    font-family: Chakra_Petch;
+    font-weight: 400;
+    font-style: normal;
+    src: url('public/fonts/Chakra_Petch/ChakraPetch-Regular.ttf');
+  }
+  
+
+  html {
+    font-family: 'Lilita_One', cursive;
+  }
+}
+
+@layer components {
+  .mainDiv {
+    @apply bg-cover bg-center w-screen h-screen flex flex-col justify-center items-center;
+    background-image: url(/images/andrea-massa-brick-wall-gallery.jpeg);
+  }
+
+  /* .mainDivGame {
+    @apply bg-cover bg-center w-screen h-max flex flex-col justify-center items-center;
+    background-image: url(/images/andrea-massa-brick-wall-gallery.jpeg);
+  } */
+
+  .logo {
+    @apply text-4xl sm:text-5xl md:text-5xl lg:text-9xl m-5 mt-0 font-normal subpixel-antialiased;
+    color: #FF0060;
+  }
+
+  .logosm {
+    @apply text-2xl sm:text-2xl md:text-5xl m-2 font-normal subpixel-antialiased;
+    color: #FF0060;
+  }
+
+  .lose {
+    @apply text-2xl sm:text-2xl md:text-4xl m-2 mb-10 font-normal text-center subpixel-antialiased;
+    color: red;
+  }
+
+  .task {
+    @apply text-2xl sm:text-4xl md:text-4xl px-3 py-2 md:px-5 md:py-3 bg-neutral-300 border-2 border-neutral-800 rounded-lg ;
+  }
+
+  .playDiv, .enemy {
+    @apply max-w-6xl flex justify-center;
+  }
+
+  .playDiv {
+    @apply max-w-2xl
+  }
+
+  .timer {
+    background-color: #86efac;
+    width: 40px;
+    height: 200px;
+    position: relative;
+  }
+
+  .timerBar {
+    @apply bg-neutral-300;
+    width: 100%;
+    height: 0%;
+    position: absolute;
+  }
+
+  .score {
+    @apply text-5xl mb-5;
+    color: #fff;
+  }
+
+  .image {
+    width: 200px;
+  }
+
+  .answer, .clear, .attack {
+    @apply text-2xl sm:text-4xl md:text-4xl m-5 px-3 py-2 md:px-5 md:py-3 bg-neutral-300 border-2 border-neutral-800 rounded-lg ;
+  }
+
+  .problem {
+    @apply text-3xl sm:text-5xl md:text-5xl m-5 px-3 py-2 md:px-5 md:py-3 bg-stone-300 border-2 border-neutral-800 ;
+  }
+
+  .clear {
+    @apply bg-red-300 hover:bg-red-500;
+  }
+
+  .attack {
+    @apply bg-blue-300 hover:bg-blue-500;
+  }
+
+  .button-primary {
+    @apply text-2xl sm:text-4xl md:text-4xl px-3 py-2 md:px-5 md:py-3 bg-green-300 border-2 border-green-600 rounded-lg  hover:bg-green-500 ;
+  }
+
+  .keyboard {
+    @apply max-w-fit md:max-w-2xl mt-3 flex justify-center flex-wrap;
+  }
+
+  .keyboard-button {
+    @apply m-1;
+  }
+
+  #game {
+    @apply mt-5 flex flex-col items-center
+  }
+
+
+}
